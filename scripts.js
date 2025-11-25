@@ -4,18 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Load initial page
     loadContent("pages/matpakke.html");
 
-    // Accordion behaviour for sections
     document.querySelectorAll(".section-header").forEach(btn => {
         btn.addEventListener("click", () => {
             const id = btn.getAttribute("data-toggle");
             const body = document.getElementById(id);
             if (!body) return;
 
-            const isOpen = body.classList.contains("open");
-            // Close all
-            document.querySelectorAll(".section-body").forEach(b => b.classList.remove("open"));
-            // Toggle current
-            if (!isOpen) body.classList.add("open");
+            body.classList.toggle("open");
         });
     });
 
