@@ -1,0 +1,323 @@
+/* ---- Base ---- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f3f5f9;
+    color: #222;
+}
+
+/* ---- Top bar ---- */
+.topbar {
+    height: 60px;
+    background: #639bcb; /* soft blue similar to screenshot */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.topbar-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.topbar-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.topbar-link {
+    cursor: pointer;
+}
+
+.avatar-small {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #e1ecf6;
+}
+
+.lang-pill {
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* ---- Layout ---- */
+.main-layout {
+    display: flex;
+    min-height: calc(100vh - 60px);
+}
+
+/* ---- Sidebar ---- */
+.sidebar {
+    width: 290px;
+    background: #f7f9fc;
+    border-right: 1px solid #dde3ec;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px 16px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+    text-align: center;
+}
+
+.avatar-large {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #e3e9f3;
+    margin: 0 auto 10px;
+}
+
+.profile-name {
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.btn-primary,
+.btn-secondary {
+    border-radius: 6px;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #639bcb;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #fff;
+    border-color: #c8d1e0;
+    color: #334155;
+}
+
+.progress-wrapper {
+    text-align: left;
+    font-size: 12px;
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #e5ecf6;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #639bcb;
+}
+
+/* ---- Course nav ---- */
+.course-nav {
+    font-size: 14px;
+}
+
+.course-section {
+    margin-bottom: 4px;
+}
+
+.section-header,
+.section-header-only {
+    width: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 8px 4px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #374151;
+    font-weight: 600;
+}
+
+.section-header-only {
+    padding-left: 0;
+}
+
+.section-body {
+    padding-left: 8px;
+    padding-bottom: 6px;
+    display: none;
+}
+
+.section-body.open {
+    display: block;
+}
+
+.chevron {
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+/* Nav links (items) */
+.nav-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 4px 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    color: #4b5563;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.active-link {
+    font-weight: 600;
+    color: #111827;
+}
+
+/* ---- Content ---- */
+.content {
+    flex: 1;
+    background: #edf0f6;
+    padding: 30px 40px;
+    overflow-y: auto;
+}
+
+.page {
+    max-width: 780px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px 32px 40px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.page h1 {
+    margin-top: 0;
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+/* Download section */
+.download-list {
+    margin-bottom: 20px;
+}
+
+.download-item {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+/* Tip cards */
+.tip-card {
+    border-radius: 10px;
+    background: #fdf2ff;
+    border-top: 6px solid #d180d6;
+    padding: 18px 16px;
+    margin-top: 18px;
+}
+
+.tip-card h2 {
+    margin: 0 0 8px;
+    font-size: 16px;
+}
+
+.tip-card.purple {
+    border-top-color: #a56fd4;
+}
+
+/* ---- Responsive (mobile / tablet) ---- */
+@media (max-width: 900px) {
+    .main-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #dde3ec;
+        order: 0;
+    }
+
+    .content {
+        padding: 20px 16px 30px;
+        order: 1;
+    }
+
+    .page {
+        padding: 22px 18px 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .topbar {
+        padding: 0 12px;
+    }
+
+    .topbar-title {
+        font-size: 15px;
+    }
+
+    .sidebar {
+        padding: 14px 12px;
+    }
+
+    .profile-card {
+        padding: 16px 12px;
+    }
+
+    .page h1 {
+        font-size: 22px;
+    }
+}

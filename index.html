@@ -1,25 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
-    <meta name="robots" content="noindex, nofollow">
-    <title>My Private Site</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 40px; background-color: #f5f5f5; }
-        h1 { color: #333; }
-        p { color: #555; }
-    </style>
+    <title>Spirende Matglede - Matpakke planlegger</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Welcome to my private site!</h1>
-<p>This site is just for personal use and is not indexed by search engines.</p>
 
-<!-- Optional simple JS password -->
-<script>
-    let password = prompt("Enter password to access the site:");
-    if(password !== "mypassword"){
-        document.body.innerHTML = "<h1>Access Denied</h1>";
-    }
-</script>
+<!-- Top Bar -->
+<header class="topbar">
+    <div class="topbar-left">
+        <div class="logo-circle">S</div>
+        <span class="topbar-title">Spirende Matglede</span>
+    </div>
+    <div class="topbar-right">
+        <span class="topbar-link">Courses</span>
+        <div class="avatar-small"></div>
+        <span class="lang-pill">EN ▾</span>
+    </div>
+</header>
+
+<main class="main-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="profile-card">
+            <div class="avatar-large"></div>
+            <div class="profile-name">Kasia Mielnicka</div>
+
+            <div class="nav-buttons">
+                <button class="btn-secondary">Previous</button>
+                <button class="btn-primary">Next</button>
+            </div>
+
+            <div class="progress-wrapper">
+                <div class="progress-labels">
+                    <span>0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="course-nav">
+            <!-- Grønn sone -->
+            <div class="course-section">
+                <button class="section-header" data-toggle="green">
+                    <span>1 Grønn sone</span>
+                    <span class="chevron">▾</span>
+                </button>
+                <div id="green" class="section-body open">
+                    <button class="nav-link active-link" data-file="pages/matpakke.html">
+                        Matpakke planlegger
+                    </button>
+                    <button class="nav-link" data-file="pages/oppskrifter.html">
+                        Oppskrifter
+                    </button>
+                    <button class="nav-link" data-file="pages/matpakke-ideer.html">
+                        Matpakke ideer
+                    </button>
+                </div>
+            </div>
+
+            <!-- Gul sone -->
+            <div class="course-section">
+                <button class="section-header" data-toggle="yellow">
+                    <span>3 Gul sone</span>
+                    <span class="chevron">▾</span>
+                </button>
+                <div id="yellow" class="section-body">
+                    <button class="nav-link" data-file="pages/gul-sone.html">
+                        Gul sone materiell
+                    </button>
+                </div>
+            </div>
+
+            <!-- Oransj sone -->
+            <div class="course-section">
+                <button class="section-header" data-toggle="orange">
+                    <span>2 Oransj sone</span>
+                    <span class="chevron">▾</span>
+                </button>
+                <div id="orange" class="section-body">
+                    <button class="nav-link" data-file="pages/oransj.html">
+                        Oransj sone materiell
+                    </button>
+                </div>
+            </div>
+
+            <!-- Lilla sone -->
+            <div class="course-section">
+                <button class="section-header" data-toggle="purple">
+                    <span>4 Lilla sone</span>
+                    <span class="chevron">▾</span>
+                </button>
+                <div id="purple" class="section-body">
+                    <button class="nav-link" data-file="pages/lilla.html">
+                        Lilla sone materiell
+                    </button>
+                </div>
+            </div>
+
+            <!-- Extra entries -->
+            <div class="course-section">
+                <button class="section-header-only" data-file="pages/placeholder.html">
+                    Matutforskning - Matlek og mateksperimentering
+                </button>
+            </div>
+            <div class="course-section">
+                <button class="section-header-only" data-file="pages/placeholder.html">
+                    Bli Bevisst - Helse &amp; Miljø
+                </button>
+            </div>
+            <div class="course-section">
+                <button class="section-header-only" data-file="pages/placeholder.html">
+                    Underliggende årsaker
+                </button>
+            </div>
+            <div class="course-section">
+                <button class="section-header-only" data-file="pages/placeholder.html">
+                    Produktguider
+                </button>
+            </div>
+            <div class="course-section">
+                <button class="section-header-only" data-file="pages/placeholder.html">
+                    Praktiske redskaper
+                </button>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Content area -->
+    <section class="content">
+        <div id="content" class="page active">
+            <!-- Initial content will be loaded here via JS -->
+            <p>Laster innhold…</p>
+        </div>
+    </section>
+</main>
+
+<script src="scripts.js"></script>
 </body>
 </html>
