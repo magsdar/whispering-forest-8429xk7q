@@ -336,3 +336,16 @@ body {
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     margin-top: 20px;
 }
+
+.download-item {
+    display: block;
+    font-size: 15px;
+    color: #374151;
+    margin-bottom: 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.download-item:hover {
+    text-decoration: underline;
+}
