@@ -334,6 +334,7 @@ body {
 .pdf-frame {
     flex: 1;                /* fills remaining space */
     width: 100%;
+    height: 600px;
     border: none;
     border-radius: 12px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.15);
