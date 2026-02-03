@@ -334,6 +334,12 @@ body {
     margin: 20px 0;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
+.content-image-medium {
+    width: 70%;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
 
 .pdf-frame {
     flex: 1;                /* fills remaining space */
